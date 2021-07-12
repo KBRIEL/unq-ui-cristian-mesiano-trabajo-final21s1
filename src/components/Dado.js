@@ -20,11 +20,11 @@ const [tirar3,setTirar3]=useState(true);
 const [tirar4,setTirar4]=useState(true);
 const [tirar5,setTirar5]=useState(true);
 
-const [sum1,setSum1]=useState(true);
-const [sum2,setSum2]=useState(true);
-const [sum3,setSum3]=useState(true);
-const [sum4,setSum4]=useState(true);
-const [sum5,setSum5]=useState(true);
+const [sum1,setSum1]=useState(false);
+const [sum2,setSum2]=useState(false);
+const [sum3,setSum3]=useState(false);
+const [sum4,setSum4]=useState(false);
+const [sum5,setSum5]=useState(false);
 
 // funcion numero random entre el 1 y el 6
 function getRandom(min, max) {
@@ -106,6 +106,7 @@ const sumar1=()=>{
   }else{
     return 0
   } 
+ 
 }
 
 const sumar2=()=>{
@@ -114,6 +115,7 @@ const sumar2=()=>{
   }else{
     return 0
   } 
+  
 }
 
 const sumar3=()=>{
@@ -122,6 +124,7 @@ const sumar3=()=>{
   }else{
     return 0
   } 
+  
 }
 
 const sumar4=()=>{
@@ -130,6 +133,7 @@ const sumar4=()=>{
   }else{
     return 0
   } 
+  
 }
 
 const sumar5=()=>{
@@ -138,9 +142,31 @@ const sumar5=()=>{
   }else{
     return 0
   } 
+  
 }
 
+const reset=()=>{
+  
+setPuntaje(0);
+setPuntos1(0);
+setPuntos2(0);
+setPuntos3(0);
+setPuntos4(0);
+setPuntos5(0);
 
+setTirar1(true);
+setTirar2(true);
+setTirar3(true);
+setTirar4(true);
+setTirar5(true);
+
+setSum1(false);
+setSum2(false);
+setSum3(false);
+setSum4(false);
+setSum5(false);
+
+}
 
 useEffect(()=>{
 
@@ -152,7 +178,7 @@ useEffect(()=>{
     return (
   <div >
     <div className="centradoT">
-      <Tablero puntaje={puntaje}/>
+      <Tablero puntaje={puntaje} reset={reset}/>
     </div>
     
       <div >

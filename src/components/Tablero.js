@@ -24,49 +24,59 @@ import { render } from "@testing-library/react";
     const btn_1=()=>{
         setUno(props.puntaje)
         puntajeFinal()
+        props.reset()
      }
 
      const btn_2=()=>{
         setDos(props.puntaje)
         puntajeFinal()
+        props.reset()
      }
 
 
      const btn_3=()=>{
         setTres(props.puntaje)
         puntajeFinal()
+        props.reset()
+
      }
 
 
      const btn_4=()=>{
         setCuatro(props.puntaje)
         puntajeFinal()
+        props.reset()
      }
 
 
      const btn_5=()=>{
         setCinco(props.puntaje)
         puntajeFinal()
+        props.reset()
      }
 
      const btn_escalera=()=>{
         setEscalera(25)
         puntajeFinal()
+        props.reset()
      }
 
      const btn_full=()=>{
         setFull(35)
         puntajeFinal()
+        props.reset()
      }
 
      const btn_pocker=()=>{
         setPocker(45)
         puntajeFinal()
+        props.reset()
      }
 
      const btn_generala=()=>{
         setGenerala(50)
         puntajeFinal()
+        props.reset()
      }
 
 // suma final del juego
