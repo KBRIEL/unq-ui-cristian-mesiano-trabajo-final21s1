@@ -9,7 +9,7 @@ import Tablero from './components/Tablero';
 function App() {
   return (
     <div className="App-link ">
-      <h1  className="letras-dados centrado">GENERALA</h1>
+      <h1  className="letras-dados titulo-generala">GENERALA</h1>
      <Generala/>
   
     </div>

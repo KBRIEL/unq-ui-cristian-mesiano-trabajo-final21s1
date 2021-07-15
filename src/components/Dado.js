@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import d from './d.png';
+import r from './r.png';
 import '../App.css';
 import Tablero from "./Tablero";
 
@@ -97,10 +98,14 @@ const elegir5=()=>{
 //sumatoria 
 const sumar=()=>{
   var total=sumar1()+sumar2()+sumar3()+sumar4()+sumar5();
-setPuntaje(total)
+setPuntaje(total);
+
 }
 
+
+
 const sumar1=()=>{
+
   if(sum1){
    return puntos1
   }else{
@@ -168,6 +173,8 @@ setSum5(false);
 
 }
 
+
+
 useEffect(()=>{
 
 
@@ -176,50 +183,96 @@ useEffect(()=>{
 
 
     return (
-  <div >
-    <div className="centradoT">
-      <Tablero puntaje={puntaje} reset={reset}/>
+  
+    <div className="conteiner">
+        <div className="row">
+            <div id="rigth" className="col-md-12 letras-dados">
+              <h2>PUNTAJE : {puntaje}</h2>
+            </div>
+        
+        <div className="col-md-12 now">
+            <Tablero puntaje={puntaje} reset={reset}/>
+        </div> 
     </div>
     
-      <div >
-        <div className="letras-dados">PUNTAJE : {puntaje}</div>
-        <div>
-          
-          <h1 className="letras-dados">DADO1 : {puntos1}</h1>
-          <img src={d} width="3%"/>
-          <button className="btn-select" onClick={elegir1}>{!tirar1 ? <h3>SELECTED</h3>:<h3>TO SELECT</h3>}</button>
+      <div className="row">
+        <div className="col-md-12 lala">
+        <div id="cajon1"  className="letras-dados">
+          <h1 className="letras-dados marg">DADO1 : {puntos1}</h1>
+          <img src={!tirar1 ? r:d}width="40%" onClick={elegir1}/>
           <button className="btn-select" onClick={()=>setSum1(!sum1)}>{sum1 ? <h3>SUMADO</h3>:<h3>SUMAR</h3>}</button>
         </div>
-        <div>
+        <div id="cajon1" className="">
           <h1 className="letras-dados">DADO2 : {puntos2}</h1>
-          <img src={d} width="3%"/>
-          <button className="btn-select" onClick={elegir2}>{!tirar2 ? <h3>SELECTED</h3>:<h3>TO SELECT</h3>}</button>
+          <img src={!tirar2 ? r:d}onClick={elegir2} width="40%"/>          
           <button className="btn-select" onClick={()=>setSum2(!sum2)}>{sum2 ? <h3>SUMADO</h3>:<h3>SUMAR</h3>}</button>
         </div>  
-        <div>
+        <div  id="cajon1" className="">
           <h1 className="letras-dados">DADO3 : {puntos3}</h1>
-          <img src={d} width="3%"/>
-          <button className="btn-select" onClick={elegir3}>{!tirar3 ? <h3>SELECTED</h3>:<h3>TO SELECT</h3>}</button>
+          <img src={!tirar3 ? r:d} width="40%"  onClick={elegir3}/>
           <button className="btn-select" onClick={()=>setSum3(!sum3)}>{sum3 ? <h3>SUMADO</h3>:<h3>SUMAR</h3>}</button>
         </div>
-        <div>
+        <div id="cajon1" className="" >
           <h1 className="letras-dados">DADO4 : {puntos4}</h1>
-          <img src={d} width="3%"/>
-          <button className="btn-select" onClick={elegir4}>{!tirar4 ? <h3>SELECTED</h3>:<h3>TO SELECT</h3>}</button>
+          <img src={!tirar4 ? r:d} onClick={elegir4} width="40%"/>
           <button className="btn-select" onClick={()=>setSum4(!sum4)}>{sum4 ? <h3>SUMADO</h3>:<h3>SUMAR</h3>}</button>
         </div>
-        <div>
+        <div id="cajon1"  className="">
           <h1 className="letras-dados">DADO5 : {puntos5}</h1>
-          <img src={d} width="3%"/>
-          <button className="btn-select" onClick={elegir5}>{!tirar5 ? <h3>SELECTED</h3>:<h3>TO SELECT</h3>}</button>
+          <img src={!tirar5 ? r:d} onClick={elegir5} width="40%"/>
           <button className="btn-select" onClick={()=>setSum5(!sum5)}>{sum5 ? <h3>SUMADO</h3>:<h3>SUMAR</h3>}</button>
         </div>
+
+        <div className="row">
+           <div className="col-md-12 ">
+             <button className="col-md-12 btn_grd" onClick={lanzar}><h1>TIRAR</h1></button>
+             {/* <button  className="col-md-12 btn_grd" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button> */}
+           </div>
+        </div>
+        <div className="row">
+           <div className="col-md-12 ">
+             {/* <button className="col-md-12 btn_grd" onClick={lanzar}><h1>TIRAR</h1></button> */}
+             <button  className="col-md-12 btn_grd" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button>
+           </div>
+
+           
+        </div>
+        <div className="row">
+           <div className="col-md-12 ">
+
+        <a className="enlaceboton"   href="javascript:location.reload()">REINICIAR</a>
+        </div>
+
+           
+</div>
+        
+        </div>
+
+
+
+
+        <div className="row">
+           <div className="col-md-12 ">
+             <button className="col-md-12 btn_grd" onClick={lanzar}><h1>TIRAR</h1></button>
+             <button  className="col-md-12 btn_grd" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button>
+           </div>
+        </div>
+
+
+
     
-      </div>
-          <button onClick={lanzar}><h1>THROW</h1></button>
-          <button onClick={sumar}><h1>SUM</h1></button>
-  </div>
-    );
-  }
+   
+      
+
+         
+      </div> 
+   
+      <a href="javascript:location.reload()">Actualizar página</a>
+    
+       
+   </div>
+  
+  
+    );} 
   
   export default Dado;
