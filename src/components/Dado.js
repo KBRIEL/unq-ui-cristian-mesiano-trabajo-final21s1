@@ -29,7 +29,7 @@ const [sum5,setSum5]=useState(false);
 
 // funcion numero random entre el 1 y el 6
 function getRandom(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (7 - 1)) + 1;
   }
 
 // lanzamiento de dados
@@ -43,21 +43,21 @@ const lanzar=()=>{
 }
 const dado1=()=>{
   if(tirar1){
-    setPuntos1(getRandom(1,6))
+    setPuntos1(getRandom())
    }
   
 }
 
 const dado2=()=>{
   if(tirar2){
-    setPuntos2(getRandom(1,6))
+    setPuntos2(getRandom())
    }
   
 }
 
 const dado3=()=>{
   if(tirar3){
-    setPuntos3(getRandom(1,6))
+    setPuntos3(getRandom())
 
    }
   
@@ -65,7 +65,7 @@ const dado3=()=>{
 
 const dado4=()=>{
   if(tirar4){
-    setPuntos4(getRandom(1,6))
+    setPuntos4(getRandom())
 
    }
   
@@ -73,7 +73,7 @@ const dado4=()=>{
 
 const dado5=()=>{
   if(tirar5){
-    setPuntos5(getRandom(1,6))
+    setPuntos5(getRandom())
 
   }
   
@@ -222,41 +222,28 @@ useEffect(()=>{
           <img src={!tirar5 ? r:d} onClick={elegir5} width="40%"/>
           <button className="btn-select" onClick={()=>setSum5(!sum5)}>{sum5 ? <h3>SUMADO</h3>:<h3>SUMAR</h3>}</button>
         </div>
-
-        <div className="row">
-           <div className="col-md-12 ">
+      </div>  
+        <div className="conteiner">
+        <div className="col-12-md lala2">
+           <div className="col-md-4 ">
+             <button  className="col-md-12 btn_grd1" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button>
+             
+           </div>
+           <div className="col-md-4 ">
+             
              <button className="col-md-12 btn_grd" onClick={lanzar}><h1>TIRAR</h1></button>
-             {/* <button  className="col-md-12 btn_grd" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button> */}
+           </div>
+           <div className="col-md-4 ">
+              <a className="col-md-12 btn_grd2" type="button" href="javascript:location.reload()">REINICIAR</a>
+              
            </div>
         </div>
-        <div className="row">
-           <div className="col-md-12 ">
-             {/* <button className="col-md-12 btn_grd" onClick={lanzar}><h1>TIRAR</h1></button> */}
-             <button  className="col-md-12 btn_grd" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button>
-           </div>
-
-           
-        </div>
-        <div className="row">
-           <div className="col-md-12 ">
-
-        <a className="enlaceboton"   href="javascript:location.reload()">REINICIAR</a>
-        </div>
-
            
 </div>
         
         </div>
 
 
-
-
-        <div className="row">
-           <div className="col-md-12 ">
-             <button className="col-md-12 btn_grd" onClick={lanzar}><h1>TIRAR</h1></button>
-             <button  className="col-md-12 btn_grd" onClick={sumar}><h1>ENVIAR AL CONTADOR</h1></button>
-           </div>
-        </div>
 
 
 
@@ -270,7 +257,7 @@ useEffect(()=>{
       
     
        
-   </div>
+   
   
   
     );} 

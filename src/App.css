@@ -31,8 +31,7 @@ body{
 }
 .App-link {
  background-color: rgb(47, 77, 35);
- /* justify-content: space-around; */
- /* flex-wrap: nowrap; */
+
  
 }
 .btn-select{
@@ -43,9 +42,6 @@ body{
 }
 .center-k{
    display: inline;
-  /* align-items: center;
-   justify-content: center; */
-  
   
 }
 .letras-dados{
@@ -66,7 +62,7 @@ body{
 
 h2{text-align: center;}
 .centrado{
-   /* background-color: blue;  */
+ 
    position:relative;
  left: 5%;
   right: 120%;
@@ -85,20 +81,15 @@ float:right;
  left: 110%;
   right:0%;
   bottom:0px; 
-   /* height: 15%;  */
   display:block; 
 }
 .marg{
-  /* margin-top: 100px; */
-/*   
-  margin: 0px, 10px, 0px, 0px; */
-  /* margin-top: 100px; */
-  /* margin-bottom: 100px; */
+
   margin-right: 70px;
-  /* margin-left: 80px; */
+
 }
 #cajon1{
-  /* float:left; */
+
 padding: 5px;
 margin: 0 10px;
 }
@@ -135,39 +126,88 @@ display: block;
 .lala{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: none;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   margin-top: 4%;
   
-  
-  }
+    }
+    .lala2{
+      display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: none;
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+margin-top: auto;
+    }
 .btn_tachado{
   color: rgb(238, 49, 49);
 }
 
-  .btn_grd{
-    margin-top: 5%;
-  /* width: 100px; */
-  justify-content: space-between;
-  height: 50px;
+.btn_grd {
+  margin: auto;
+      margin-top: auto;
+  width: auto;
+  justify-content: center;
+  height: auto;
   background-color: #421c9b;
   color: white;
-  }
+  display: flex;
+  align-items: center;
+  font-size: xx;
+  padding: 0px 25px;
+  flex-direction: column;
+  margin-top: 5vw;
+  border-radius: 10px;
+}
+
+.btn_grd1 {
+  margin: auto;
+      margin-top: auto;
+  width: auto;
+  justify-content: center;
+  height: auto;
+  background-color: #421c9b;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: xx-small;
+  padding: 1px 5px;
+  flex-direction: column;
+  margin-top: 5vw;
+  border-radius: 10px;
+}
+
+.btn_grd2 {
+  margin: auto;
+  margin-top: auto;
+  width: 100px;
+  justify-content: center;
+  height: auto;
+  background-color: #0977a3;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: xx;
+  padding: 13px 15px;
+  flex-direction: column;
+  margin-top: 5vw;
+  border-radius: 5px;
+}
 
 
   .enlaceboton {   
-    
-    font-size: 20pt;
-    font-weight: bold;
-    padding: 4px;
     margin-top: 5%;
-    height: 50px;
-    justify-content: space-between;
-    height: 50px;
-    background-color: #421c9b;
-    color: white;
-    text-decoration: none;
+width: auto;
+justify-content: center;
+height: auto;
+background-color: #421c9b;
+color: white;
+display: flex;
+align-items: center;
+font-size: xx-small;
+padding: 3px 5px; 
+
  }
 
 
